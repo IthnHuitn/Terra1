@@ -20,7 +20,7 @@
 
 1. [Руководство по оформлению Markdown файлов](https://gist.github.com/Jekins/2bf2d0638163f1294637#Code)
 
-![Версия_Terraform](ttps://github.com/IthnHuitn/Terra1/blob/main/screens/terra0-1.png)
+![Версия_Terraform](ttps://github.com/IthnHuitn/Terra1/blob/master/screens/terra0-1.png)
 
 ### Задание 1
 
@@ -29,8 +29,8 @@
 2. `result = "SgSxl03UD9l58882"`
 
 3. 
-![Ошибки_Terraform](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-1.png)
-![Ошибки_Terraform](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-2.png)
+![Ошибки_Terraform](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra1-1.png)
+![Ошибки_Terraform](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra1-2.png)
 ```markdown
 1. `Error: Missing name for resource - отсутствие имени! "Все блоки ресурсов должны содержать два значения - тип и имя!"`
 2. `Error: Invalid resource name - Недопустимое имя ресурса. Имя должно начинаться с буквы или подчеркивания и может содержать только буквы, цифры, подчеркивания и дефисы.`
@@ -76,11 +76,11 @@ resource "docker_container" "nginx" {
   }
 }
 ```
-![Terraform1-3](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-3.png)
+![Terraform1-3](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra1-3.png)
 
 5. 
 
-![Terraform1-4](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-4.png)
+![Terraform1-4](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra1-4.png)
 
 ##### Опасность применения -auto-approve:
 
@@ -106,9 +106,9 @@ resource "docker_container" "nginx" {
 
 6. 
 
- ![Terraform1-5](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-5.png)
+ ![Terraform1-5](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra1-5.png)
 
- ![Terraform1-6](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-6.png)
+ ![Terraform1-6](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra1-6.png)
 
 
 
@@ -116,8 +116,8 @@ resource "docker_container" "nginx" {
 
 ### Задание 2
 
- ![Terraform2-1](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra2-1.png)
- ![Terraform2-2](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra2-2.png)
+ ![Terraform2-1](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra2-1.png)
+ ![Terraform2-2](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra2-2.png)
 
 
 

@@ -116,6 +116,9 @@ resource "docker_container" "nginx" {
 
 ### Задание 2
 
+[VM code](https://github.com/IthnHuitn/Terra1/tree/master/proj1)
+[MySQL](https://github.com/IthnHuitn/Terra1/tree/master/proj2)
+
  ![Terraform2-1](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra2-1.png)
  ![Terraform2-2](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra2-2.png)
 

@@ -29,8 +29,8 @@
 2. `result = "SgSxl03UD9l58882"`
 
 3. 
-![Ошибки_Terraform](ttps://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-1.png)
-![Ошибки_Terraform](ttps://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-2.png)
+![Ошибки_Terraform](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-1.png)
+![Ошибки_Terraform](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-2.png)
 ```markdown
 1. `Error: Missing name for resource - отсутствие имени! "Все блоки ресурсов должны содержать два значения - тип и имя!"`
 2. `Error: Invalid resource name - Недопустимое имя ресурса. Имя должно начинаться с буквы или подчеркивания и может содержать только буквы, цифры, подчеркивания и дефисы.`
@@ -76,11 +76,11 @@ resource "docker_container" "nginx" {
   }
 }
 ```
-![Terraform1-3](ttps://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-3.png)
+![Terraform1-3](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-3.png)
 
 5. 
 
-![Terraform1-4](ttps://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-4.png)
+![Terraform1-4](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-4.png)
 
 ##### Опасность применения -auto-approve:
 
@@ -106,9 +106,9 @@ resource "docker_container" "nginx" {
 
 6. 
 
- ![Terraform1-5](ttps://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-5.png)
+ ![Terraform1-5](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-5.png)
 
- ![Terraform1-6](ttps://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-6.png)
+ ![Terraform1-6](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra1-6.png)
 
 
 
@@ -116,69 +116,9 @@ resource "docker_container" "nginx" {
 
 ### Задание 2
 
-`Приведите ответ в свободной форме........`
+ ![Terraform2-1](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra2-1.png)
+ ![Terraform2-2](https://github.com/IthnHuitn/Terra1/blob/main/screens/terra2-2.png)
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
-
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
 
 
 ---
-
-### Задание 3
-
-`Приведите ответ в свободной форме........`
-
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
-
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота](ссылка на скриншот)`
-
-### Задание 4
-
-`Приведите ответ в свободной форме........`
-
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
-
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота](ссылка на скриншот)`

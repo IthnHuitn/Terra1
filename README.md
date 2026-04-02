@@ -24,7 +24,7 @@
 
 ### Задание 1
 
-1. `Согласно этому .gitignore, допустимо сохранить личную, секретную информацию(логины,пароли,ключи,токены итд) в файле с расширением или суфиксом "tfstate".`
+1. `Согласно этому .gitignore, допустимо сохранить личную, секретную информацию(логины,пароли,ключи,токены итд) в файле personal.auto.tfvars.`
 
 2. `result = "SgSxl03UD9l58882"`
 
@@ -104,13 +104,28 @@ resource "docker_container" "nginx" {
 
    5. Повторяющиеся операции — при выполнении однотипных, хорошо протестированных изменений.
 
+---
+
 6. 
 
  ![Terraform1-5](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra1-5.png)
 
  ![Terraform1-6](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra1-6.png)
 
+---
 
+7. 
+docker-образ nginx:latest не был удалён, благодаря параметру "keep_locally"(Boolean) при значении "true", 
+который позволяет сохранить образ локально при выполнении команды "destroy". 
+Если параметр с флагом "false", образ будет удалён.
+
+```hcl
+resource "docker_image" "nginx"{
+  name         = "nginx:latest"
+  keep_locally = true
+}
+```
+![Terraform1-7](https://github.com/IthnHuitn/Terra1/blob/master/screens/terra1-7.png)
 
 ---
 

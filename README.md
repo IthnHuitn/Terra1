@@ -33,77 +33,67 @@
 5. `Заполните здесь этапы выполнения, если требуется ....`
 6. 
 
-![terra1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra1-1.png)
-![terra2](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra1-2.png)
+![terra1-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra1-1.png)
+![terra1-2](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra1-2.png)
+
+#### code
+[main.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z1/main.tf)
+[providers.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z1/providers.tf)
+[variables.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z1/variables.tf)
 
 
 ---
 
 ### Задание 2
 
-`Приведите ответ в свободной форме........`
+![terra2-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra2-1.png)
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
-
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
+#### code
+[main.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z2/main.tf)
+[providers.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z2/providers.tf)
+[variables.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z2/variables.tf)
 
 
 ---
 
 ### Задание 3
 
-`Приведите ответ в свободной форме........`
+![terra3-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra3-1.png)
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
+#### code
+[main.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z3/main.tf)
+[providers.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z3/providers.tf)
+[variables.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z3/variables.tf)
+[vms_platform.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z3/vms_platform.tf)
+[outputs.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/code/z3/outputs.tf)
 
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота](ссылка на скриншот)`
 
 ### Задание 4
 
-`Приведите ответ в свободной форме........`
+![terra4-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra4-1.png)
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
+### Задание 5
 
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
+![terra5-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra5-1.png)
+![terra5-2](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra5-2.png)
+![terra5-3](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra5-3.png)
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота](ссылка на скриншот)`
+### Задание 6
+
+![terra6-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra6-1.png)
+
+### Задание 7
+
+![terra7-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra7-1.png)
+
+### Задание 8
+
+![terra8-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra8-1.png)
+
+### Задание 9
+
+![terra9-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra9-1.png)
+
+
+
+

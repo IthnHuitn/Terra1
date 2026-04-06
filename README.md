@@ -33,16 +33,8 @@
 5. `Заполните здесь этапы выполнения, если требуется ....`
 6. 
 
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
+![terra1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra1-1.png)
+![terra2](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra1-2.png)
 
 
 ---

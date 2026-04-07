@@ -26,12 +26,14 @@
 
 `Ошибки`
 
-1. `"ubuntu-2004-lts" -> "ubuntu-2004-lts-oslogin"`
-2. `"platform_id = "standart-v4" -> "platform_id = "standard-v4a"`
-3. `"core_fraction = 5" -> " core_fraction = 50"`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
+1. `Platform "standart-v4" not found --- "platform_id = "standart-v4" -> "platform_id = "standard-v4a" `
+    - Данная строка имеет две ошибки: 
+      - 1-слово standart написано неверно, что помешает терраформу определить вариант ID платформы с любой версией!
+      - 2-версия платформы standard-v4 не существует, предположил, что версия была недописана и выбрал v4a, а не v3.
+2. `Error = the specified core fraction is not available on platform "standard-v4a"; allowed core fractions: 20, 50, 100 --- "core_fraction = 5" -> " core_fraction = 50"`
+    - Ошибка сообщает о том, что для данной платформы не допустимо значение доли процессора в 5%, допустимы только 20%, 50% и 100%.
+3. `Error = the specified number of cores is not available on platform "standard-v4a"; allowed core number: 2, 4 --- "cores  = 1" -> "cores  = 2"`
+    - Ошибка сообщает о том, что для данной платформы не допустимо такое количество ядер, допустимые значение 2 или 4 ядра.
 
 ![terra1-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra1-1.png)
 ![terra1-2](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra1-2.png)
@@ -81,6 +83,16 @@
 ### Задание 6
 
 ![terra6-1](https://github.com/IthnHuitn/Terra1/blob/terraform-02/files/screens/terra6-1.png)
+
+#### code
+[main.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/main.tf)
+[providers.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/providers.tf)
+[variables.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/variables.tf)
+[vms_platform.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/vms_platform.tf)
+[outputs.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/outputs.tf)\
+[locals.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-02/locals.tf)
+
+
 
 ### Задание 7
 

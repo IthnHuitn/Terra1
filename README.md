@@ -25,6 +25,7 @@
 ### Задание 1
 
 ![terra1-1](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra1-1.png)
+![terra1-2](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra1-2.png)
 
 
 ---
@@ -37,7 +38,6 @@
  [for_each-vm.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/for_each-vm.tf)`
 
 
-
 ---
 
 ### Задание 3
@@ -46,6 +46,8 @@
 
  [disk_vm.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/disk_vm.tf)`
 
+
+---
 
 ### Задание 4
 
@@ -57,6 +59,6 @@
 
 ### Задание 5
 
-![terra5-1](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/inventory.ini)
+![terra5-1](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra5-1.png)
 
  [output.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/output.tf)`

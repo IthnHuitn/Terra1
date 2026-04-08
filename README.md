@@ -34,8 +34,8 @@
 
 ![terra2-1](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra2-1.png)
 
- [count-vm.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/count-vm.tf)`
- [for_each-vm.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/for_each-vm.tf)`
+ [count-vm.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/count-vm.tf)
+ [for_each-vm.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/for_each-vm.tf)
 
 
 ---
@@ -44,7 +44,7 @@
 
 ![terra3-1](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra3-1.png)
 
- [disk_vm.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/disk_vm.tf)`
+ [disk_vm.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/disk_vm.tf)
 
 
 ---
@@ -53,7 +53,7 @@
 
 ![terra4-1](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra4-1.png)
 
- [inventory.ini](https://github.com/IthnHuitn/Terra1/blob/terraform-03/output.tf)`
+ [inventory.ini](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/inventory.ini)
 
 ---
 
@@ -61,4 +61,4 @@
 
 ![terra5-1](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra5-1.png)
 
- [output.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/output.tf)`
+ [output.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/outputs.tf)

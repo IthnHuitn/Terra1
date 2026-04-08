@@ -55,10 +55,44 @@
 
  [inventory.ini](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/inventory.ini)
 
+
 ---
 
 ### Задание 5
 
 ![terra5-1](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra5-1.png)
 
- [output.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/outputs.tf)
+ [outputs.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-03/outputs.tf)
+
+
+---
+
+### Задание 7
+
+![terra7-1](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra7-1.png)
+
+
+---
+
+### Задание 8
+
+`Ошибка 1 (критическая): Отсутствует закрывающая скобка } в интерполяции ansible_host=${i["network_interface"][0]["nat_ip_address"]`
+`Ошибка 2: Лишний пробел в ключе ${i["platform_id "]} - правильно ${i["platform_id"]}`
+`Ошибка 3: Лишняя тильда в начале интерполяций %{~ for i in webservers ~} и %{~ endfor ~}`
+Исправленный вариант
+```hcl
+[webservers]
+%{ for i in webservers ~}
+${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"]} platform_id=${i["platform_id"]}
+%{ endfor ~}
+```
+
+
+---
+
+### Задание 9
+
+![terra9-1](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra9-1.png)
+![terra9-2](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra9-2.png)
+![terra9-3](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra9-3.png)
+![terra9-4](https://github.com/IthnHuitn/Terra1/blob/terraform-03/files/screens/terra9-4.png)

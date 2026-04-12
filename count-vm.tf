@@ -1,34 +1,37 @@
-# count-vm.tf - создание двух ВМ web-1 и web-2
+# ============================================
+# WEB SERVERS (COUNT)
+# ============================================
 
 resource "yandex_compute_instance" "web" {
-  count = 2
-  
+  count = var.web_vm_config.count
+
   name        = "web-${count.index + 1}"
-  platform_id = "standard-v1"
+  platform_id = var.platform_id
   zone        = var.default_zone
-  
+
   resources {
-    cores         = 2
-    memory        = 2
-    core_fraction = 20
+    cores         = var.web_vm_config.cores
+    memory        = var.web_vm_config.memory
+    core_fraction = var.core_fraction
   }
-  
+
   boot_disk {
     initialize_params {
-      image_id = "fd827b91d99psvq5fjit" # Ubuntu 22.04 LTS
-      size     = 10
+      image_id = data.yandex_compute_image.ubuntu.id
+      size     = var.web_vm_config.disk_size
+      type     = var.boot_disk_type
     }
   }
-  
+
   network_interface {
     subnet_id          = yandex_vpc_subnet.develop.id
     security_group_ids = [yandex_vpc_security_group.example.id]
     nat                = true
   }
-  
+
   metadata = {
-    ssh-keys = "ubuntu:${file(var.vms_ssh_root_key)}"
+    ssh-keys = "${var.ssh_user}:${file(var.vms_ssh_root_key)}"
   }
-  
+
   depends_on = [yandex_compute_instance.db]
 }

@@ -1,58 +1,41 @@
-# for_each-vm.tf - создание ВМ для БД
+# ============================================
+# DATABASE SERVERS (FOR_EACH)
+# ============================================
 
-variable "each_vm" {
-  type = list(object({
-    vm_name     = string
-    cpu         = number
-    ram         = number
-    disk_volume = number
-  }))
-  description = "Database VMs configuration"
-  default = [
-    {
-      vm_name     = "main"
-      cpu         = 2
-      ram         = 4
-      disk_volume = 20
-    },
-    {
-      vm_name     = "replica"
-      cpu         = 2
-      ram         = 2
-      disk_volume = 15
-    }
-  ]
+locals {
+  db_instances_map = {
+    for vm in var.db_vm_configs : vm.vm_name => vm
+  }
 }
 
 resource "yandex_compute_instance" "db" {
-  for_each = {
-    for vm in var.each_vm : vm.vm_name => vm
-  }
-  
+  for_each = local.db_instances_map
+
   name        = each.value.vm_name
-  platform_id = "standard-v1"
+  platform_id = var.platform_id
   zone        = var.default_zone
-  
+
   resources {
     cores         = each.value.cpu
     memory        = each.value.ram
-    core_fraction = 20
+    core_fraction = var.core_fraction
   }
-  
+
   boot_disk {
     initialize_params {
-      image_id = "fd827b91d99psvq5fjit" # Ubuntu 22.04 LTS
+      image_id = data.yandex_compute_image.ubuntu.id
       size     = each.value.disk_volume
+      type     = var.boot_disk_type
     }
   }
-  
+
   network_interface {
     subnet_id          = yandex_vpc_subnet.develop.id
     security_group_ids = [yandex_vpc_security_group.example.id]
     nat                = true
   }
-  
+
   metadata = {
-    ssh-keys = "ubuntu:${file(var.vms_ssh_root_key)}"
+    ssh-keys = "${var.ssh_user}:${file(var.vms_ssh_root_key)}"
   }
 }

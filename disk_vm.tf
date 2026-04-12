@@ -1,58 +1,55 @@
-# disk_vm.tf - создание 3 дисков и ВМ storage с подключением этих дисков
+# ============================================
+# STORAGE DISKS AND VM
+# ============================================
 
-# Создаем 3 одинаковых виртуальных диска по 1 Гб с использованием count
+# Создаем дополнительные диски
 resource "yandex_compute_disk" "storage_disk" {
-  count = 3
-  
-  name     = "storage-disk-${count.index + 1}"
-  type     = "network-hdd"
-  zone     = var.default_zone
-  size     = 1
+  count = var.storage_vm_config.extra_disks.count
+
+  name       = "storage-disk-${count.index + 1}"
+  type       = var.storage_vm_config.extra_disks.type
+  zone       = var.default_zone
+  size       = var.storage_vm_config.extra_disks.size
   block_size = 4096
-  
-  labels = {
-    environment = "storage"
-    disk_number = tostring(count.index + 1)
-  }
 }
 
-# Создаем одиночную ВМ с именем "storage"
+# Создаем ВМ storage
 resource "yandex_compute_instance" "storage" {
   name        = "storage"
-  platform_id = "standard-v1"
+  platform_id = var.platform_id
   zone        = var.default_zone
-  
+
   resources {
-    cores         = 2
-    memory        = 2
-    core_fraction = 20
+    cores         = var.storage_vm_config.cores
+    memory        = var.storage_vm_config.memory
+    core_fraction = var.core_fraction
   }
-  
+
   boot_disk {
     initialize_params {
-      image_id = "fd827b91d99psvq5fjit" # Ubuntu 22.04 LTS
-      size     = 10
+      image_id = data.yandex_compute_image.ubuntu.id
+      size     = var.storage_vm_config.boot_disk_size
+      type     = var.boot_disk_type
     }
   }
-  
-  # Динамическое подключение созданных дисков с использованием for_each
+
+  # Динамическое подключение дисков
   dynamic "secondary_disk" {
     for_each = yandex_compute_disk.storage_disk
     content {
       disk_id = secondary_disk.value.id
     }
   }
-  
+
   network_interface {
     subnet_id          = yandex_vpc_subnet.develop.id
     security_group_ids = [yandex_vpc_security_group.example.id]
     nat                = true
   }
-  
+
   metadata = {
-    ssh-keys = "ubuntu:${file(var.vms_ssh_root_key)}"
+    ssh-keys = "${var.ssh_user}:${file(var.vms_ssh_root_key)}"
   }
-  
-  # Явная зависимость от всех созданных дисков
+
   depends_on = [yandex_compute_disk.storage_disk]
 }

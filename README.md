@@ -100,7 +100,274 @@ No modules.
 ![terra4-2](https://github.com/IthnHuitn/Terra1/blob/terraform-04/files/screens/terra4-2.png)
 [code4](https://github.com/IthnHuitn/Terra1/tree/terraform-04/files/z4/)
 
+```shell
+Terraform will perform the following actions:
 
+  # module.analytics-vm.yandex_compute_instance.vm[0] will be created
+  + resource "yandex_compute_instance" "vm" {
+      + allow_stopping_for_update = true
+      + created_at                = (known after apply)
+      + description               = "TODO: description; {{terraform yyy managed}}"
+      + folder_id                 = (known after apply)
+      + fqdn                      = (known after apply)
+      + gpu_cluster_id            = (known after apply)
+      + hardware_generation       = (known after apply)
+      + hostname                  = "analytics-analytics-web-0"
+      + id                        = (known after apply)
+      + labels                    = {
+          + "project" = "analytics"
+        }
+      + maintenance_grace_period  = (known after apply)
+      + maintenance_policy        = (known after apply)
+      + metadata                  = {
+          + "serial-port-enable" = "1"
+          + "user-data"          = <<-EOT
+                #cloud-config
+                users:
+                  - name: ubuntu
+                    groups: sudo
+                    shell: /bin/bash
+                    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+                    ssh_authorized_keys:
+                      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEZNnbfrn7DyGYp0QdzeW7vaAC0H5OZMLKe1a2V//KYyqRoHaA92nHvx2rwDf4rJQZ2H0VzpYK6eVP4IhatXYu0p3W42lFkX9ESWOGdGWGNvSSaFx59qB2BKoe4y1Kpuwmc9ZTU3opwymXi0K8BCej7vsSRMFJy9QspETk3DaMLDZBf5x5rhKuFXyhBVzTsunjMEwA1/HkYYXM4ndJXY4G7T6We+afYR4NAb4zyjagTLGG1XAkORrJTvhfnZ99nBuygYwMxrab/SD36TuVO1CGn09Kmio8EeNB3v3uK+AboLQgE8XF79SB9JNyBe4oE5Wtraek8MvJoHBWxn+eglg9
+                package_update: true
+                package_upgrade: false
+                packages:
+                  - vim
+                  - nginx
+                runcmd:
+                  - systemctl enable nginx
+                  - systemctl start nginx
+            EOT
+        }
+      + name                      = "analytics-analytics-web-0"
+      + network_acceleration_type = "standard"
+      + platform_id               = "standard-v1"
+      + status                    = (known after apply)
+      + zone                      = "ru-central1-b"
+
+      + boot_disk {
+          + auto_delete = true
+          + device_name = (known after apply)
+          + disk_id     = (known after apply)
+          + mode        = (known after apply)
+
+          + initialize_params {
+              + block_size  = (known after apply)
+              + description = (known after apply)
+              + image_id    = "fd8k3nqnfpvt19meo2b4"
+              + name        = (known after apply)
+              + size        = 10
+              + snapshot_id = (known after apply)
+              + type        = "network-hdd"
+            }
+        }
+
+      + metadata_options (known after apply)
+
+      + network_interface {
+          + index          = (known after apply)
+          + ip_address     = (known after apply)
+          + ipv4           = true
+          + ipv6           = (known after apply)
+          + ipv6_address   = (known after apply)
+          + mac_address    = (known after apply)
+          + nat            = true
+          + nat_ip_address = (known after apply)
+          + nat_ip_version = (known after apply)
+          + subnet_id      = (known after apply)
+        }
+
+      + placement_policy (known after apply)
+
+      + resources {
+          + core_fraction = 5
+          + cores         = 2
+          + memory        = 1
+        }
+
+      + scheduling_policy {
+          + preemptible = true
+        }
+    }
+
+  # module.marketing-vm.yandex_compute_instance.vm[0] will be created
+  + resource "yandex_compute_instance" "vm" {
+      + allow_stopping_for_update = true
+      + created_at                = (known after apply)
+      + description               = "TODO: description; {{terraform yyy managed}}"
+      + folder_id                 = (known after apply)
+      + fqdn                      = (known after apply)
+      + gpu_cluster_id            = (known after apply)
+      + hardware_generation       = (known after apply)
+      + hostname                  = "marketing-marketing-web-0"
+      + id                        = (known after apply)
+      + labels                    = {
+          + "project" = "marketing"
+        }
+      + maintenance_grace_period  = (known after apply)
+      + maintenance_policy        = (known after apply)
+      + metadata                  = {
+          + "serial-port-enable" = "1"
+          + "user-data"          = <<-EOT
+                #cloud-config
+                users:
+                  - name: ubuntu
+                    groups: sudo
+                    shell: /bin/bash
+                    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+                    ssh_authorized_keys:
+                      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEZNnbfrn7DyGYp0QdzeW7vaAC0H5OZMLKe1a2V//KYyqRoHaA92nHvx2rwDf4rJQZ2H0VzpYK6eVP4IhatXYu0p3W42lFkX9ESWOGdGWGNvSSaFx59qB2BKoe4y1Kpuwmc9ZTU3opwymXi0K8BCej7vsSRMFJy9QspETk3DaMLDZBf5x5rhKuFXyhBVzTsunjMEwA1/HkYYXM4ndJXY4G7T6We+afYR4NAb4zyjagTLGG1XAkORrJTvhfnZ99nBuygYwMxrab/SD36TuVO1CGn09Kmio8EeNB3v3uK+AboLQgE8XF79SB9JNyBe4oE5Wtraek8MvJoHBWxn+eglg9
+                package_update: true
+                package_upgrade: false
+                packages:
+                  - vim
+                  - nginx
+                runcmd:
+                  - systemctl enable nginx
+                  - systemctl start nginx
+            EOT
+        }
+      + name                      = "marketing-marketing-web-0"
+      + network_acceleration_type = "standard"
+      + platform_id               = "standard-v1"
+      + status                    = (known after apply)
+      + zone                      = "ru-central1-a"
+
+      + boot_disk {
+          + auto_delete = true
+          + device_name = (known after apply)
+          + disk_id     = (known after apply)
+          + mode        = (known after apply)
+
+          + initialize_params {
+              + block_size  = (known after apply)
+              + description = (known after apply)
+              + image_id    = "fd8k3nqnfpvt19meo2b4"
+              + name        = (known after apply)
+              + size        = 10
+              + snapshot_id = (known after apply)
+              + type        = "network-hdd"
+            }
+        }
+
+      + metadata_options (known after apply)
+
+      + network_interface {
+          + index          = (known after apply)
+          + ip_address     = (known after apply)
+          + ipv4           = true
+          + ipv6           = (known after apply)
+          + ipv6_address   = (known after apply)
+          + mac_address    = (known after apply)
+          + nat            = true
+          + nat_ip_address = (known after apply)
+          + nat_ip_version = (known after apply)
+          + subnet_id      = (known after apply)
+        }
+
+      + placement_policy (known after apply)
+
+      + resources {
+          + core_fraction = 5
+          + cores         = 2
+          + memory        = 1
+        }
+
+      + scheduling_policy {
+          + preemptible = true
+        }
+    }
+
+  # module.vpc_analytics.yandex_vpc_network.network will be created
+  + resource "yandex_vpc_network" "network" {
+      + created_at                = (known after apply)
+      + default_security_group_id = (known after apply)
+      + folder_id                 = (known after apply)
+      + id                        = (known after apply)
+      + labels                    = (known after apply)
+      + name                      = "analytics"
+      + subnet_ids                = (known after apply)
+    }
+
+  # module.vpc_analytics.yandex_vpc_subnet.subnet["analytics-ru-central1-b"] will be created
+  + resource "yandex_vpc_subnet" "subnet" {
+      + created_at     = (known after apply)
+      + folder_id      = (known after apply)
+      + id             = (known after apply)
+      + labels         = (known after apply)
+      + name           = "analytics-ru-central1-b"
+      + network_id     = (known after apply)
+      + v4_cidr_blocks = [
+          + "10.0.2.0/24",
+        ]
+      + v6_cidr_blocks = (known after apply)
+      + zone           = "ru-central1-b"
+    }
+
+  # module.vpc_marketing.yandex_vpc_network.network will be created
+  + resource "yandex_vpc_network" "network" {
+      + created_at                = (known after apply)
+      + default_security_group_id = (known after apply)
+      + folder_id                 = (known after apply)
+      + id                        = (known after apply)
+      + labels                    = (known after apply)
+      + name                      = "marketing"
+      + subnet_ids                = (known after apply)
+    }
+
+  # module.vpc_marketing.yandex_vpc_subnet.subnet["marketing-ru-central1-a"] will be created
+  + resource "yandex_vpc_subnet" "subnet" {
+      + created_at     = (known after apply)
+      + folder_id      = (known after apply)
+      + id             = (known after apply)
+      + labels         = (known after apply)
+      + name           = "marketing-ru-central1-a"
+      + network_id     = (known after apply)
+      + v4_cidr_blocks = [
+          + "10.0.1.0/24",
+        ]
+      + v6_cidr_blocks = (known after apply)
+      + zone           = "ru-central1-a"
+    }
+
+Plan: 6 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + analytics_vm_internal_ip = (known after apply)
+  + analytics_vm_ip          = (known after apply)
+  + marketing_vm_internal_ip = (known after apply)
+  + marketing_vm_ip          = (known after apply)
+  + out                      = [
+      + (known after apply),
+      + (known after apply),
+    ]
+  + vpc_analytics_info       = {
+      + network_id = (known after apply)
+      + subnets    = {
+          + ru-central1-b = {
+              + cidr       = "10.0.2.0/24"
+              + id         = (known after apply)
+              + name       = "analytics-ru-central1-b"
+              + network_id = (known after apply)
+              + zone       = "ru-central1-b"
+            }
+        }
+    }
+  + vpc_marketing_info       = {
+      + network_id = (known after apply)
+      + subnets    = {
+          + ru-central1-a = {
+              + cidr       = "10.0.1.0/24"
+              + id         = (known after apply)
+              + name       = "marketing-ru-central1-a"
+              + network_id = (known after apply)
+              + zone       = "ru-central1-a"
+            }
+        }
+    }
+╷
+```
 ---
 
 ### Задание 5

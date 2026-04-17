@@ -31,7 +31,7 @@ data "template_file" "cloudinit" {
 
 # ВМ для проекта marketing
 module "marketing-vm" {
-  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=4421e3a5546a88dba619a88b46a6371ac7c90da4"
   env_name       = "marketing"
   network_id     = module.vpc_marketing.network_id
   subnet_zones   = [var.marketing_zone]
@@ -56,7 +56,7 @@ module "marketing-vm" {
 
 # ВМ для проекта analytics
 module "analytics-vm" {
-  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=4421e3a5546a88dba619a88b46a6371ac7c90da4"
   env_name       = "analytics"
   network_id     = module.vpc_analytics.network_id
   subnet_zones   = [var.analytics_zone]

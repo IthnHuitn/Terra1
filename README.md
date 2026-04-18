@@ -93,4 +93,4 @@ TFLint (1 тип ошибки):
 ![terra4-2](https://github.com/IthnHuitn/Terra1/blob/terraform-05/files/screens/terra4-2.png)
 ![terra4-3](https://github.com/IthnHuitn/Terra1/blob/terraform-05/files/screens/terra4-3.png)
 
-![validators.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-05/files/z4/validators.tf)
+![validators.tf](https://github.com/IthnHuitn/Terra1/blob/terraform-05/files/code/z4/validators.tf)
